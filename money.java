@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class money {
 	static Scanner in= new Scanner(System.in);
-	
-	int  total=0;
+
+	int  total=0; //stores the total amount of money inputed
 	int Value;
 	
 	final double qValue = .25;
@@ -18,15 +18,14 @@ public class money {
 	double finalTotal=0;
 	
 double insertMoney(){
-	//declaring the coin variables
+	//declaring the coin variables 
 	int quarters=0;
 	int dimes=0;
 	int nickels=0;
 	int pennies=0;
 	
-		
+	//display the system selection 	
 	do {
-	
 		System.out.print("\nInsert coins \n");
 		System.out.print("1. Quarter\n");
 		System.out.print("2. Dime\n");
@@ -35,7 +34,7 @@ double insertMoney(){
 		System.out.println("5. DONE inserting coins\n");
 	
 		Value = in.nextInt();
-		
+		//calculate amount of money entered depending the coin combinations.
 		if(Value == 1)
 		{
 			quarters++;
@@ -55,9 +54,10 @@ double insertMoney(){
 	
 		}while(Value != 5);
 	
+	//calculates the total amount of money entered and stores it.
 	finalTotal = (quarters*qValue) + (dimes*dvalue)+(nickels*nVaule)+(pennies*Value);
 	
-	System.out.print("your balance is $ "+ finalTotal+"\n");
+	System.out.print("your balance is $ "+ finalTotal+"\n");//print total amount
 		
 		return finalTotal;
 	}
@@ -71,6 +71,7 @@ double insertMoney(){
 		double MilkChocolate =.10;
 		double Pretzels = 1.50;
 		double theChange=0;
+		// handles cases where the customer does not have enough money for an item
 		if(itemNumber==1)
 		{
 			theChange = finalTotal-Hotcheetos;  
