@@ -2,7 +2,7 @@ package vmv2;
 
 public class sssss {
 	
-//this class diisplays the menu
+//this class diisplays the menu of the vending machine, the numbers reprsent the number option
 
 	void displayMenu()
 	{
